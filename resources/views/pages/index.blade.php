@@ -687,7 +687,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container">    
             <!-- content tabs -->
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab"
