@@ -74,3 +74,5 @@ Route::fallback(function () {
 });
 
 Route::view('login','pages.admin.login');
+Route::view('admin','pages.admin.index');
+
