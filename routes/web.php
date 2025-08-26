@@ -72,3 +72,5 @@ Route::get('/404', function () {
 Route::fallback(function () {
     return view('pages.404');
 });
+
+Route::view('login','pages.admin.login');
