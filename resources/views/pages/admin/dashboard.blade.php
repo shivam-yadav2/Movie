@@ -397,7 +397,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                        <img src="admin-assets/images/products/img-1.png"
+                                                                        <img src="/admin-assets/images/products/img-1.png"
                                                                             alt="" class="img-fluid d-block" />
                                                                     </div>
                                                                     <div>
@@ -430,7 +430,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                        <img src="admin-assets/images/products/img-2.png"
+                                                                        <img src="/admin-assets/images/products/img-2.png"
                                                                             alt="" class="img-fluid d-block" />
                                                                     </div>
                                                                     <div>
@@ -466,7 +466,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                        <img src="admin-assets/images/products/img-3.png"
+                                                                        <img src="/admin-assets/images/products/img-3.png"
                                                                             alt="" class="img-fluid d-block" />
                                                                     </div>
                                                                     <div>
@@ -499,7 +499,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                        <img src="admin-assets/images/products/img-4.png"
+                                                                        <img src="/admin-assets/images/products/img-4.png"
                                                                             alt="" class="img-fluid d-block" />
                                                                     </div>
                                                                     <div>
@@ -537,7 +537,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                        <img src="admin-assets/images/products/img-5.png"
+                                                                        <img src="/admin-assets/images/products/img-5.png"
                                                                             alt="" class="img-fluid d-block" />
                                                                     </div>
                                                                     <div>
@@ -636,7 +636,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/companies/img-1.png"
+                                                                        <img src="/admin-assets/images/companies/img-1.png"
                                                                             alt="" class="avatar-sm p-2" />
                                                                     </div>
                                                                     <div>
@@ -670,7 +670,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/companies/img-2.png"
+                                                                        <img src="/admin-assets/images/companies/img-2.png"
                                                                             alt="" class="avatar-sm p-2" />
                                                                     </div>
                                                                     <div class="flex-grow-1">
@@ -704,7 +704,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/companies/img-3.png"
+                                                                        <img src="/admin-assets/images/companies/img-3.png"
                                                                             alt="" class="avatar-sm p-2" />
                                                                     </div>
                                                                     <div class="flex-gow-1">
@@ -738,7 +738,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/companies/img-8.png"
+                                                                        <img src="/admin-assets/images/companies/img-8.png"
                                                                             alt="" class="avatar-sm p-2" />
                                                                     </div>
                                                                     <div class="flex-grow-1">
@@ -772,7 +772,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/companies/img-5.png"
+                                                                        <img src="/admin-assets/images/companies/img-5.png"
                                                                             alt="" class="avatar-sm p-2" />
                                                                     </div>
                                                                     <div class="flex-grow-1">
@@ -923,7 +923,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/users/avatar-1.jpg"
+                                                                        <img src="/admin-assets/images/users/avatar-1.jpg"
                                                                             alt=""
                                                                             class="avatar-xs rounded-circle material-shadow" />
                                                                     </div>
@@ -955,7 +955,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/users/avatar-2.jpg"
+                                                                        <img src="/admin-assets/images/users/avatar-2.jpg"
                                                                             alt=""
                                                                             class="avatar-xs rounded-circle material-shadow" />
                                                                     </div>
@@ -987,7 +987,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/users/avatar-3.jpg"
+                                                                        <img src="/admin-assets/images/users/avatar-3.jpg"
                                                                             alt=""
                                                                             class="avatar-xs rounded-circle material-shadow" />
                                                                     </div>
@@ -1019,7 +1019,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/users/avatar-4.jpg"
+                                                                        <img src="/admin-assets/images/users/avatar-4.jpg"
                                                                             alt=""
                                                                             class="avatar-xs rounded-circle material-shadow" />
                                                                     </div>
@@ -1051,7 +1051,7 @@
                                                             <td>
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="flex-shrink-0 me-2">
-                                                                        <img src="admin-assets/images/users/avatar-6.jpg"
+                                                                        <img src="/admin-assets/images/users/avatar-6.jpg"
                                                                             alt=""
                                                                             class="avatar-xs rounded-circle material-shadow" />
                                                                     </div>
@@ -1139,17 +1139,17 @@
                                                     <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2">
                                                         <a href="apps-ecommerce-product-details.html"
                                                             class="bg-light rounded p-1">
-                                                            <img src="admin-assets/images/products/img-8.png" alt=""
+                                                            <img src="/admin-assets/images/products/img-8.png" alt=""
                                                                 class="img-fluid d-block" />
                                                         </a>
                                                         <a href="apps-ecommerce-product-details.html"
                                                             class="bg-light rounded p-1">
-                                                            <img src="admin-assets/images/products/img-2.png" alt=""
+                                                            <img src="/admin-assets/images/products/img-2.png" alt=""
                                                                 class="img-fluid d-block" />
                                                         </a>
                                                         <a href="apps-ecommerce-product-details.html"
                                                             class="bg-light rounded p-1">
-                                                            <img src="admin-assets/images/products/img-10.png" alt=""
+                                                            <img src="/admin-assets/images/products/img-10.png" alt=""
                                                                 class="img-fluid d-block" />
                                                         </a>
                                                     </div>
@@ -1160,7 +1160,7 @@
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="admin-assets/images/users/avatar-2.jpg" alt=""
+                                                    <img src="/admin-assets/images/users/avatar-2.jpg" alt=""
                                                         class="avatar-xs rounded-circle acitivity-avatar material-shadow" />
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
@@ -1258,7 +1258,7 @@
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="admin-assets/images/users/avatar-3.jpg" alt=""
+                                                    <img src="/admin-assets/images/users/avatar-3.jpg" alt=""
                                                         class="avatar-xs rounded-circle acitivity-avatar material-shadow" />
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
@@ -1339,7 +1339,7 @@
                                                                 <div class="flex-shrink-0 avatar-sm">
                                                                     <div
                                                                         class="avatar-title bg-light rounded material-shadow">
-                                                                        <img src="admin-assets/images/companies/img-1.png"
+                                                                        <img src="/admin-assets/images/companies/img-1.png"
                                                                             alt="" height="30" />
                                                                     </div>
                                                                 </div>
@@ -1372,7 +1372,7 @@
                                                         <div class="card-body">
                                                             <div class="d-flex">
                                                                 <div class="flex-shrink-0">
-                                                                    <img src="admin-assets/images/users/avatar-3.jpg"
+                                                                    <img src="/admin-assets/images/users/avatar-3.jpg"
                                                                         alt=""
                                                                         class="avatar-sm rounded material-shadow" />
                                                                 </div>
@@ -1406,7 +1406,7 @@
                                                             <div class="d-flex">
                                                                 <div class="flex-shrink-0 avatar-sm">
                                                                     <div class="avatar-title bg-light rounded">
-                                                                        <img src="admin-assets/images/companies/img-8.png"
+                                                                        <img src="/admin-assets/images/companies/img-8.png"
                                                                             alt="" height="30" />
                                                                     </div>
                                                                 </div>
@@ -1439,7 +1439,7 @@
                                                         <div class="card-body">
                                                             <div class="d-flex">
                                                                 <div class="flex-shrink-0">
-                                                                    <img src="admin-assets/images/users/avatar-2.jpg"
+                                                                    <img src="/admin-assets/images/users/avatar-2.jpg"
                                                                         alt=""
                                                                         class="avatar-sm rounded material-shadow" />
                                                                 </div>
@@ -1618,7 +1618,7 @@
 
                                     <div class="card sidebar-alert bg-light border-0 text-center mx-4 mb-0 mt-3">
                                         <div class="card-body">
-                                            <img src="admin-assets/images/giftbox.png" alt="" />
+                                            <img src="/admin-assets/images/giftbox.png" alt="" />
                                             <div class="mt-4">
                                                 <h5>Invite New Seller</h5>
                                                 <p class="text-muted lh-base">

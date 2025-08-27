@@ -1,81 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Videos</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      background: #f0f2f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
-    }
+@extends('layout.admin')
+@section('content')
 
-    .table thead th {
-      font-weight: 700;
-      background: #e9ecef;
-      text-align: center;
-    }
-
-    .table tbody td {
-      vertical-align: middle;
-      text-align: center;
-    }
-
-    .action-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 16px;
-      border: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-
-    .action-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .edit-btn { background-color: #28a745; }
-    .delete-btn { background-color: #dc3545; }
-
-    .add-btn {
-      background-color: #0d6efd;
-      color: #fff;
-      padding: 0.5rem 1.2rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: background-color 0.3s;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    .add-btn:hover { background-color: #0b5ed7; text-decoration: none; }
-
-    img.video-image {
-      border-radius: 8px;
-      max-width: 100px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
+<div class="container-fluid">
   <a href="{{ route('videos.create') }}" class="add-btn"><i class="fas fa-plus"></i> Add Video</a>
 
   <div class="table-responsive">
     <table class="table table-bordered shadow-sm bg-white">
       <thead>
-        <tr>
+        <tr class = "fs-4 text-center">
           <th>Heading</th>
           <th>Category</th>
           <th>Embed Code</th>
@@ -86,7 +18,7 @@
       </thead>
       <tbody>
         @foreach($videos as $video)
-        <tr>
+        <tr class="fs-5 text-center">
           <td>{{ $video->heading }}</td>
           <td>{{ $video->category }}</td>
           <td>{{ $video->embed_code }}</td>
@@ -97,20 +29,22 @@
             @endif
           </td>
           <td>
-            <a href="{{ route('videos.edit', $video) }}" class="action-btn edit-btn me-1" title="Edit">
-              <i class="fas fa-edit"></i>
-            </a>
+            <div class="d-flex gap-1 justify-content-center">
+              <a href="{{ route('videos.edit', $video) }}" class=" btn btn-success d-flex align-items-center justify-content-center rounded-circle p-0 me-1" title="Edit" style="width: 35px; height: 35px; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;">
+                <i class="fas fa-edit"></i>
+              </a>
 
-            <!-- Delete button triggers modal -->
-            <button type="button" class="action-btn delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-form-id="delete-form-{{ $video->id }}" title="Delete">
-              <i class="fas fa-trash"></i>
-            </button>
+              <!-- Delete button triggers modal -->
+              <button type="button" class="btn btn-danger d-flex align-items-center justify-content-center rounded-circle p-0" data-bs-toggle="modal" data-bs-target="#deleteModal" data-form-id="delete-form-{{ $video->id }}" title="Delete" style="width: 35px; height: 35px; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;">
+                <i class="fas fa-trash"></i>
+              </button>
 
-            <!-- Hidden delete form -->
-            <form id="delete-form-{{ $video->id }}" action="{{ route('videos.destroy', $video) }}" method="POST" class="d-none">
-              @csrf
-              @method('DELETE')
-            </form>
+             <!-- Hidden delete form -->
+              <form id="delete-form-{{ $video->id }}" action="{{ route('videos.destroy', $video) }}" method="POST" class="d-none">
+                @csrf
+                @method('DELETE')
+               </form>
+            </div>
           </td>
         </tr>
         @endforeach
@@ -120,7 +54,7 @@
 </div>
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -138,8 +72,6 @@
   </div>
 </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   let deleteFormId;
 
@@ -156,6 +88,5 @@
       document.getElementById(deleteFormId).submit();
     }
   });
-</script>
-</body>
-</html>
+</script> -->
+@endsection

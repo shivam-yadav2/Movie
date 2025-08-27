@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ShortsController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\LoginController;
 use App\Models\Short;
 use App\Models\Video;
 
@@ -82,8 +83,28 @@ Route::fallback(function () {
     return view('pages.404');
 });
 
-Route::view('login','pages.admin.login');
-Route::view('admin','pages.admin.index');
+// Route::view('login','pages.admin.login');
+// Route::view('admin','pages.admin.index');
+
+// Admin Login page (for guests only)
+Route::get('admin/login', [LoginController::class, 'showLoginForm'])
+    ->middleware('guest')
+    ->name('login');   // single-word name
+
+// Handle login form submission
+Route::post('admin/login', [LoginController::class, 'login'])
+    ->name('loginSubmit'); // single-wordish
+
+// Logout
+Route::post('admin/logout', [LoginController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');   // single-word name
+
+// Protected Dashboard
+Route::get('admin/dashboard', function () {
+    return view('pages.admin.dashboard'); // dashboard Blade
+})->middleware('auth')->name('dashboard'); // single-word name
+
 
 // Show all heroes (slider list in admin)
 Route::get('/heroes', [HeroController::class, 'index'])->name('heroes.index');

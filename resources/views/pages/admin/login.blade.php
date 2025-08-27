@@ -11,18 +11,18 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="admin-assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/admin-assets/images/favicon.ico">
 
     <!-- Layout config Js -->
-    <script src="admin-assets/js/layout.js"></script>
+    <script src="/admin-assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
-    <link href="admin-assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="admin-assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="admin-assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="admin-assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -67,11 +67,14 @@
                                     <p class="text-muted">Sign in to continue to Velzon.</p>
                                 </div>
                                 <div class="p-2 mt-4">
-                                    <form action="https://themesbrand.com/velzon/html/master/index.html">
+                                    <form action= "{{ route('loginSubmit') }}" method="POST">
 
                                         <div class="mb-3">
-                                            <label for="username" class="form-label">Username</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                            @error('email')
+                                             <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
 
                                         <div class="mb-3">
@@ -81,6 +84,9 @@
                                             <label class="form-label" for="password-input">Password</label>
                                             <div class="position-relative auth-pass-inputgroup mb-3">
                                                 <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input">
+                                                @error('password')
+                                                 <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                                 <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                             </div>
                                         </div>
@@ -106,6 +112,8 @@
                                             </div>
                                         </div>
                                     </form>
+                                    
+
                                 </div>
                             </div>
                             <!-- end card body -->
@@ -143,19 +151,19 @@
     <!-- end auth-page-wrapper -->
 
     <!-- JAVASCRIPT -->
-    <script src="admin-assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin-assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="admin-assets/libs/node-waves/waves.min.js"></script>
-    <script src="admin-assets/libs/feather-icons/feather.min.js"></script>
-    <script src="admin-assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="admin-assets/js/plugins.js"></script>
+    <script src="/admin-assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin-assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/admin-assets/libs/node-waves/waves.min.js"></script>
+    <script src="/admin-assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/admin-assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/admin-assets/js/plugins.js"></script>
 
     <!-- particles js -->
-    <script src="admin-assets/libs/particles.js/particles.js"></script>
+    <script src="/admin-assets/libs/particles.js/particles.js"></script>
     <!-- particles app js -->
-    <script src="admin-assets/js/pages/particles.app.js"></script>
+    <script src="/admin-assets/js/pages/particles.app.js"></script>
     <!-- password-addon init -->
-    <script src="admin-assets/js/pages/password-addon.init.js"></script>
+    <script src="/admin-assets/js/pages/password-addon.init.js"></script>
 </body>
 
 
