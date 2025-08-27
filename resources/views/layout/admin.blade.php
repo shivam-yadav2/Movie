@@ -1079,7 +1079,12 @@
 
         <!-- Main Content -->
         <main>
-            @yield('content')
+             <div class="main-content">
+        <div class="page-content">
+ 
+                    @yield('content')
+                </div>
+            </div>
         </main>
         <!-- End Main Content -->
     </div>

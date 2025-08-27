@@ -269,7 +269,7 @@
     </style>
 @endsection
 @section('content')
-    <section class="creative-carousal--hero">
+    <!-- <section class="creative-carousal--hero">
         <div class="carousel-slider swiper-container-horizontal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-background="https://i.ibb.co/nNggbhf5/joshua-earle-njz0-Tt-Rszo-unsplash.jpg"
@@ -309,35 +309,65 @@
                         <a href="#">DISCOVER CASE</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Of Swiper -->
-            <div class="slide-progress">
+            <!-- <div class="slide-progress">
                 <span>01</span>
                 <div class="swiper-pagination swiper-pagination-progressbar"><span
                         class="swiper-pagination-progressbar-fill"></span></div>
                 <span>05</span>
-            </div>
+            </div> -->
             <!-- end of progress -->
-            <div class="swiper-button-prev">PREV</div>
+            <!-- <div class="swiper-button-prev">PREV</div> -->
             <!-- end button-prev -->
-            <div class="swiper-button-next">NEXT</div>
+            <!-- <div class="swiper-button-next">NEXT</div> -->
             <!-- end button-next -->
+        <!-- </div>
+    </section> -->
+    <section class="creative-carousal--hero">
+    <div class="carousel-slider swiper-container-horizontal">
+        <div class="swiper-wrapper">
+            @foreach(\App\Models\Hero::all() as $hero)
+                <div class="swiper-slide" 
+                     data-background="{{ asset($hero->image) }}" 
+                     style="background-image: url({{ asset($hero->image) }});">
+                    <div class="inner">
+                        <h2>{{ $hero->heading }}</h2>
+                        <a href="#">{{ $hero->subheading ?? 'DISCOVER CASE' }}</a>
+                    </div>
+                </div>
+            @endforeach
         </div>
-    </section>
+        <!-- End Of Swiper -->
+        <div class="slide-progress">
+            <span>01</span>
+            <div class="swiper-pagination swiper-pagination-progressbar">
+                <span class="swiper-pagination-progressbar-fill"></span>
+            </div>
+            <span>{{ \App\Models\Hero::count() < 10 ? '0'.\App\Models\Hero::count() : \App\Models\Hero::count() }}</span>
+        </div>
+        <!-- end of progress -->
+        <div class="swiper-button-prev">PREV</div>
+        <!-- end button-prev -->
+        <div class="swiper-button-next">NEXT</div>
+        <!-- end button-next -->
+    </div>
+</section>
+
 
 
     <!-- home -->
-    <section class="home">
+    <!-- <section class="home">
         <div class="container">
-            <div class="row">
+            <div class="row"> -->
                 <!-- home title -->
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <h1 class="home__title"><b>Latest Shorts</b> OF THIS SEASON</h1>
-                </div>
+                </div> -->
                 <!-- end home title -->
 
                 <!-- home carousel -->
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <div class="home__carousel splide splide--home">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev" type="button">
@@ -477,25 +507,82 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- end home carousel -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
+    <section class="home">
+    <div class="container">
+        <div class="row">
+            <!-- home title -->
+            <div class="col-12">
+                <h1 class="home__title"><b>Latest Shorts</b> OF THIS SEASON</h1>
+            </div>
+            <!-- end home title -->
+
+            <!-- home carousel -->
+            <div class="col-12">
+                <div class="home__carousel splide splide--home">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev" type="button">
+                            <i class="ti ti-chevron-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next" type="button">
+                            <i class="ti ti-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            @foreach($shorts as $short)
+                            <li class="splide__slide">
+                                <div class="item item--hero">
+                                    <div class="item__cover">
+                                        <img src="{{ asset($short->image ?? 'assets/img/covers/default.jpg') }}" alt="">
+                                        <a href="{{ $short->url }}" class="item__play" target="_blank">
+                                            <i class="ti ti-player-play-filled"></i>
+                                        </a>
+                                        {{-- Optional: rating if you have it --}}
+                                        {{-- <span class="item__rate item__rate--green">8.0</span> --}}
+                                        <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                    </div>
+                                    <div class="item__content">
+                                        <h3 class="item__title"><a href="{{ $short->url }}" target="_blank">{{ $short->heading }}</a></h3>
+                                        <span class="item__category">
+                                            @if($short->category)
+                                                @foreach(explode(',', $short->category) as $cat)
+                                                    <a href="#">{{ $cat }}</a>
+                                                @endforeach
+                                            @endif
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end home carousel -->
+        </div>
+    </div>
+</section>
+
     <!-- end home -->
 
     <!-- home -->
-    <section class="home">
+    <!-- <section class="home">
         <div class="container">
-            <div class="row">
+            <div class="row"> -->
                 <!-- home title -->
-                <div class="col-12 mb-4">
+                <!-- <div class="col-12 mb-4">
                     <h1 class="home__title"><b>Latest Videos</b> </h1>
-                </div>
+                </div> -->
                 <!-- end home title -->
 
                 <!-- home carousel -->
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <div class="yt__carousel splide splide--home">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev" type="button">
@@ -644,11 +731,90 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- end home carousel -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
+    <section class="home">
+    <div class="container">
+        <div class="row">
+            <!-- home title -->
+            <div class="col-12 mb-4">
+                <h1 class="home__title"><b>Latest Videos</b> </h1>
+            </div>
+            <!-- end home title -->
+
+            <!-- home carousel -->
+            <div class="col-12">
+                <div class="yt__carousel splide splide--home">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev" type="button">
+                            <i class="ti ti-chevron-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next" type="button">
+                            <i class="ti ti-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            @foreach($videos as $video)
+                                <li class="splide__slide">
+                                    <div class="item item--hero">
+                                        <div class="item__cover">
+                                            @if($video->embed_code)
+                                                {{-- Show embed iframe if available --}}
+                                                <iframe style="width: 100%; height:100%" 
+                                                    src="{{ $video->embed_code }}" 
+                                                    title="{{ $video->heading }}" 
+                                                    frameborder="0" 
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen>
+                                                </iframe>
+                                            @elseif($video->image)
+                                                {{-- Show uploaded image --}}
+                                                <img src="{{ asset($video->image) }}" alt="{{ $video->heading }}">
+                                            @else
+                                                {{-- Fallback image --}}
+                                                <img src="{{ asset('assets/images/default-thumbnail.jpg') }}" alt="{{ $video->heading }}">
+                                            @endif
+
+                                            <a href="{{ $video->url ?? '#' }}" class="item__play">
+                                                <i class="ti ti-player-play-filled"></i>
+                                            </a>
+                                            
+                                            @if(!empty($video->rating))
+                                                <span class="item__rate item__rate--green">{{ $video->rating }}</span>
+                                            @endif
+
+                                            <button class="item__favorite" type="button">
+                                                <i class="ti ti-bookmark"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a href="{{ $video->url ?? '#' }}">{{ $video->heading }}</a>
+                                            </h3>
+                                            <span class="item__category">
+                                                @if($video->category)
+                                                    <a href="#">{{ $video->category }}</a>
+                                                @endif
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end home carousel -->
+        </div>
+    </div>
+</section>
+
     <!-- end home -->
 
     <!-- content -->

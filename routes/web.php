@@ -1,10 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HeroController;
+use App\Http\Controllers\ShortsController;
+use App\Http\Controllers\VideoController;
+use App\Models\Short;
+use App\Models\Video;
 
 // Home page
 Route::get('/', function () {
-    return view('pages.index');
+    $shorts = Short::all();
+     $videos = Video::all();
+    return view('pages.index',compact('shorts','videos'));
+    // return view('pages.index',compact('videos'));
 })->name('home');
 
 // Authentication routes
@@ -15,6 +23,7 @@ Route::get('/signin', function () {
 Route::get('/signup', function () {
     return view('pages.signup');
 })->name('signup');
+
 
 Route::get('/forgot-password', function () {
     return view('pages.forgot');
@@ -75,4 +84,44 @@ Route::fallback(function () {
 
 Route::view('login','pages.admin.login');
 Route::view('admin','pages.admin.index');
+
+// Show all heroes (slider list in admin)
+Route::get('/heroes', [HeroController::class, 'index'])->name('heroes.index');
+// Show create form
+Route::get('/heroes/create', [HeroController::class, 'create'])->name('heroes.create');
+// Store new hero
+Route::post('/heroes/store', [HeroController::class, 'store'])->name('heroes.store');
+// Show edit form
+Route::get('/heroes/{hero}/edit', [HeroController::class, 'edit'])->name('heroes.edit');
+// Update hero
+Route::put('/heroes/{hero}', [HeroController::class, 'update'])->name('heroes.update');
+// Delete hero
+Route::delete('/heroes/{hero}', [HeroController::class, 'destroy'])->name('heroes.destroy');
+
+
+// Show all shorts
+Route::get('/shorts', [ShortsController::class, 'index'])->name('shorts.index');
+// Show create form
+Route::get('/shorts/create', [ShortsController::class, 'create'])->name('shorts.create');
+// Store new hero
+Route::post('/shorts/store', [ShortsController::class, 'store'])->name('shorts.store');
+// Show edit form
+Route::get('/shorts/{short}/edit', [ShortsController::class, 'edit'])->name('shorts.edit');
+// Update hero
+Route::put('/shorts/{short}', [ShortsController::class, 'update'])->name('shorts.update');
+// Delete hero
+Route::delete('/shorts/{short}', [ShortsController::class, 'destroy'])->name('shorts.destroy');
+
+// Show all Videos
+Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
+// Show create form
+Route::get('/videos/create', [VideoController::class, 'create'])->name('videos.create');
+// Store new hero
+Route::post('/videos/store', [VideoController::class, 'store'])->name('videos.store');
+// Show edit form
+Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
+// Update hero
+Route::put('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
+// Delete hero
+Route::delete('/videos/{video}', [VideoController::class, 'destroy'])->name('videos.destroy');
 
