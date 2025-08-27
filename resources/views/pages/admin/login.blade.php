@@ -68,10 +68,10 @@
                                 </div>
                                 <div class="p-2 mt-4">
                                     <form action= "{{ route('loginSubmit') }}" method="POST">
-
+                                        @csrf
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                            <input type="email"  name="email" class="form-control" id="email" placeholder="Enter email">
                                             @error('email')
                                              <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -83,7 +83,7 @@
                                             </div>
                                             <label class="form-label" for="password-input">Password</label>
                                             <div class="position-relative auth-pass-inputgroup mb-3">
-                                                <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input">
+                                                <input type="password" name="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input">
                                                 @error('password')
                                                  <span class="text-danger">{{ $message }}</span>
                                                 @enderror
