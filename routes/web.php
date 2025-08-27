@@ -89,21 +89,21 @@ Route::fallback(function () {
 // Admin Login page (for guests only)
 Route::get('admin/login', [LoginController::class, 'showLoginForm'])
     ->middleware('guest')
-    ->name('login');   // single-word name
+    ->name('login');   
 
 // Handle login form submission
 Route::post('admin/login', [LoginController::class, 'login'])
-    ->name('loginSubmit'); // single-wordish
+    ->name('loginSubmit'); 
 
 // Logout
 Route::post('admin/logout', [LoginController::class, 'logout'])
     ->middleware('auth')
-    ->name('logout');   // single-word name
+    ->name('logout');   
 
 // Protected Dashboard
 Route::get('admin/dashboard', function () {
     return view('pages.admin.dashboard'); // dashboard Blade
-})->middleware('auth')->name('dashboard'); // single-word name
+})->middleware('auth')->name('dashboard'); 
 
 
 // Show all heroes (slider list in admin)
