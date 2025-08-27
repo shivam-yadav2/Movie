@@ -1,9 +1,9 @@
 /*----------------------------------------
 [Master Stylesheet]
 
-Project:	HotFlix
+Project:	Production
 Version:	3.0
-Primary use:	HotFlix Template
+Primary use:	Production Template
 ----------------------------------------*/
 /*----------------------------------------
 [Table of contents]
@@ -187,7 +187,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__logo img {
   width: auto;
-  height: 20px;
+  height: 65px;
   display: block;
 }
 .header__nav {
@@ -473,7 +473,7 @@ body::-webkit-scrollbar-thumb {
     height: 80px;
   }
   .header__logo img {
-    height: 24px;
+    height: 75px;
   }
   .header__auth {
     margin-right: 52px;
@@ -3407,7 +3407,7 @@ body::-webkit-scrollbar-thumb {
 }
 .footer__logo img {
   width: auto;
-  height: 20px;
+  height: 65px;
   display: block;
 }
 .footer__nav {
@@ -3464,7 +3464,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .footer__logo img {
-    height: 22px;
+    height: 75px;
   }
   .footer__content {
     flex-direction: row;

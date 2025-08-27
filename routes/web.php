@@ -46,6 +46,10 @@ Route::get('/faq', function () {
     return view('pages.faq');
 })->name('faq');
 
+Route::get('/our-services', function () {
+    return view('pages.privacy');
+})->name('our-services');
+
 // Catalog and movie pages
 Route::get('/catalog', function () {
     return view('pages.catalog');

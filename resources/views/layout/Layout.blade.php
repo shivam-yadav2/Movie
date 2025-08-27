@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/splide.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slimselect.css') }}">
@@ -22,13 +21,13 @@
     <link rel="apple-touch-icon" href="{{ asset('assets/icon/favicon-32x32.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <meta name="description" content="Online Movies, TV Shows & Cinema HTML Template">
-    <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
-    <title>@yield('title', 'HotFlix – Online Movies, TV Shows & Cinema')</title>
-    @yield('css')
-    @stack('styles')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- CSS -->
+    <l <meta name="description" content="Online Movies, TV Shows & Cinema HTML Template">
+        <meta name="keywords" content="">
+        <meta name="author" content="Dmitry Volkov">
+        <title>@yield('title', 'Prizm Production')</title>
+        @yield('css')
+        @stack('styles')
 </head>
 
 <body>
@@ -40,11 +39,9 @@
                     <div class="header__content">
                         <!-- header logo -->
                         <a href="{{ route('home') }}" class="header__logo">
-                            <img src="{{ asset('assets/img/logo.svg') }}" alt="">
+                            <img src="{{ asset('assets/image.png') }}" alt="">
                         </a>
-                        <!-- end header logo -->
 
-                        <!-- header nav -->
                         <ul class="header__nav">
                             <!-- dropdown -->
                             <li class="header__nav-item">
@@ -59,8 +56,8 @@
 
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href={{ route('catalog2') }} role="button"
-                                    aria-expanded="false">Movies </a>
+                                <a class="header__nav-link" href={{ route('our-services') }} role="button"
+                                    aria-expanded="false">Our-Services </a>
                             </li>
                             <li class="header__nav-item">
                                 <a class="header__nav-link" href={{ route('actor') }} role="button"
@@ -137,9 +134,9 @@
                 <div class="col-12">
                     <div class="footer__content">
                         <a href="{{ route('home') }}" class="footer__logo">
-                            <img src="{{ asset('assets/img/logo.svg') }}" alt="">
+                            <img src="{{ asset('assets/image.png') }}" alt="">
                         </a>
-                        <span class="footer__copyright">© HOTFLIX, 2019—2024 <br> Create by <a
+                        <span class="footer__copyright">© Production, 2019—2024 <br> Create by <a
                                 href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Dmitry
                                 Volkov</a></span>
                         <nav class="footer__nav">
@@ -230,6 +227,7 @@
             },
         })
     </script>
+    @yield('js')
     @stack('scripts')
 </body>
 

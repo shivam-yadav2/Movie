@@ -1,6 +1,6 @@
 @extends('layout.Layout')
 
-@section('title', 'HotFlix')
+@section('title', 'Prizm Production')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,7 @@
 					<div class="header__content">
 						<!-- header logo -->
 						<a href="{{ asset('index.html') }}" class="header__logo">
-							<img src="{{ asset('assets/img/logo.svg') }}" alt="">
+							<img src="{{ asset('assets/image.png') }}" alt="">
 						</a>
 						<!-- end header logo -->
 
@@ -55,7 +55,7 @@
 									<li><a href="{{ asset('contacts.html') }}">Contacts</a></li>
 									<li><a href="{{ asset('faq.html') }}">Help center</a></li>
 									<li><a href="{{ asset('privacy.html') }}">Privacy policy</a></li>
-									<li><a href="{{ asset('https://hotflix.volkovdesign.com/admin/index.html') }}" target="_blank">Admin pages</a></li>
+									<li><a href="{{ asset('https://Production.volkovdesign.com/admin/index.html') }}" target="_blank">Admin pages</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
@@ -213,7 +213,7 @@
 				<!-- section title -->
 				<div class="col-12 col-xl-11">
 					<h2 class="section__title">Our Features</h2>
-					<p class="section__text">Welcome to HotFlix movie site, the ultimate destination for all film enthusiasts. Immerse yourself in a world of captivating stories, stunning visuals, and unforgettable performances. Explore our extensive library of movies, spanning across genres, eras, and cultures.</p>
+					<p class="section__text">Welcome to Production movie site, the ultimate destination for all film enthusiasts. Immerse yourself in a world of captivating stories, stunning visuals, and unforgettable performances. Explore our extensive library of movies, spanning across genres, eras, and cultures.</p>
 				</div>
 				<!-- end section title -->
 			</div>

@@ -1,6 +1,6 @@
 @extends('layout.Layout')
 
-@section('title', 'HotFlix')
+@section('title', 'Prizm Production')
 
 @section('content')
 <div class="container">

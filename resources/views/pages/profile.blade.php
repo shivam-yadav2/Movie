@@ -1,6 +1,6 @@
 @extends('layout.Layout')
 
-@section('title', 'HotFlix')
+@section('title', 'Prizm Production')
 
 @section('content')
 
@@ -12,7 +12,7 @@
 				<div class="col-12">
 					<div class="section__wrap">
 						<!-- section title -->
-						<h1 class="section__title section__title--head">My HotFlix</h1>
+						<h1 class="section__title section__title--head">My Production</h1>
 						<!-- end section title -->
 
 						<!-- breadcrumbs -->
@@ -42,7 +42,7 @@
 								</div>
 								<div class="profile__meta">
 									<h3>John Doe</h3>
-									<span>HOTFLIX ID: 78123</span>
+									<span>Production ID: 78123</span>
 								</div>
 							</div>
 

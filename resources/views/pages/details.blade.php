@@ -1,6 +1,6 @@
 @extends('layout.Layout')
 
-@section('title', 'HotFlix')
+@section('title', 'Prizm Production')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,7 @@
 					<div class="header__content">
 						<!-- header logo -->
 						<a href="{{ asset('index.html') }}" class="header__logo">
-							<img src="{{ asset('assets/img/logo.svg') }}" alt="">
+							<img src="{{ asset('assets/image.png') }}" alt="">
 						</a>
 						<!-- end header logo -->
 
@@ -55,7 +55,7 @@
 									<li><a href="{{ asset('contacts.html') }}">Contacts</a></li>
 									<li><a href="{{ asset('faq.html') }}">Help center</a></li>
 									<li><a href="{{ asset('privacy.html') }}">Privacy policy</a></li>
-									<li><a href="{{ asset('https://hotflix.volkovdesign.com/admin/index.html') }}" target="_blank">Admin pages</a></li>
+									<li><a href="{{ asset('https://Production.volkovdesign.com/admin/index.html') }}" target="_blank">Admin pages</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
