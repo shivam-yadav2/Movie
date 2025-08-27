@@ -12,25 +12,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
+
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('admin-assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('/admin-assets/images/favicon.ico') }}">
 
     <!-- jsvectormap css -->
-    <link href="{{ asset('admin-assets/libs/jsvectormap/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/libs/jsvectormap/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!--Swiper slider css-->
-    <link href="{{ asset('admin-assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
-    <script src="{{ asset('admin-assets/js/layout.js') }}"></script>
+    <script src="{{ asset('/admin-assets/js/layout.js') }}"></script>
     <!-- Bootstrap Css -->
-    <link href="{{ asset('admin-assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{ asset('admin-assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="{{ asset('admin-assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="{{ asset('admin-assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/admin-assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
     @yield('css')
 </head>
 
@@ -44,22 +48,22 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('admin-assets/images/logo-sm.png') }}" alt=""
+                                    <img src="{{ asset('/admin-assets/images/logo-sm.png') }}" alt=""
                                         height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('admin-assets/images/logo-dark.png') }}" alt=""
+                                    <img src="{{ asset('/admin-assets/images/logo-dark.png') }}" alt=""
                                         height="17">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('admin-assets/images/logo-sm.png') }}" alt=""
+                                    <img src="{{ asset('/admin-assets/images/logo-sm.png') }}" alt=""
                                         height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('admin-assets/images/logo-light.png') }}" alt=""
+                                    <img src="{{ asset('/admin-assets/images/logo-light.png') }}" alt=""
                                         height="17">
                                 </span>
                             </a>
@@ -130,7 +134,7 @@
                                         <!-- item -->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                             <div class="d-flex">
-                                                <img src="{{ asset('admin-assets/images/users/avatar-2.jpg') }}"
+                                                <img src="{{ asset('/admin-assets/images/users/avatar-2.jpg') }}"
                                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="m-0">Angela Bernier</h6>
@@ -141,7 +145,7 @@
                                         <!-- item -->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                             <div class="d-flex">
-                                                <img src="{{ asset('admin-assets/images/users/avatar-3.jpg') }}"
+                                                <img src="{{ asset('/admin-assets/images/users/avatar-3.jpg') }}"
                                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="m-0">David Grasso</h6>
@@ -152,7 +156,7 @@
                                         <!-- item -->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
                                             <div class="d-flex">
-                                                <img src="{{ asset('admin-assets/images/users/avatar-5.jpg') }}"
+                                                <img src="{{ asset('/admin-assets/images/users/avatar-5.jpg') }}"
                                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="m-0">Mike Bunch</h6>
@@ -199,7 +203,7 @@
                             <button type="button"
                                 class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img id="header-lang-img" src="{{ asset('admin-assets/images/flags/us.svg') }}"
+                                <img id="header-lang-img" src="{{ asset('/admin-assets/images/flags/us.svg') }}"
                                     alt="Header Language" height="20" class="rounded">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -207,7 +211,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language py-2"
                                     data-lang="en" title="English">
-                                    <img src="{{ asset('admin-assets/images/flags/us.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/us.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">English</span>
                                 </a>
@@ -215,7 +219,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="sp" title="Spanish">
-                                    <img src="{{ asset('admin-assets/images/flags/spain.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/spain.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">Española</span>
                                 </a>
@@ -223,7 +227,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="gr" title="German">
-                                    <img src="{{ asset('admin-assets/images/flags/germany.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/germany.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18"> <span
                                         class="align-middle">Deutsche</span>
                                 </a>
@@ -231,7 +235,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="it" title="Italian">
-                                    <img src="{{ asset('admin-assets/images/flags/italy.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/italy.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">Italiana</span>
                                 </a>
@@ -239,7 +243,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="ru" title="Russian">
-                                    <img src="{{ asset('admin-assets/images/flags/russia.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/russia.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">русский</span>
                                 </a>
@@ -247,7 +251,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="ch" title="Chinese">
-                                    <img src="{{ asset('admin-assets/images/flags/china.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/china.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">中国人</span>
                                 </a>
@@ -255,7 +259,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="fr" title="French">
-                                    <img src="{{ asset('admin-assets/images/flags/french.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/french.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">français</span>
                                 </a>
@@ -263,7 +267,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language"
                                     data-lang="ar" title="Arabic">
-                                    <img src="{{ asset('admin-assets/images/flags/ae.svg') }}" alt="user-image"
+                                    <img src="{{ asset('/admin-assets/images/flags/ae.svg') }}" alt="user-image"
                                         class="me-2 rounded" height="18">
                                     <span class="align-middle">Arabic</span>
                                 </a>
@@ -293,21 +297,21 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/github.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/github.png') }}"
                                                     alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/bitbucket.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/bitbucket.png') }}"
                                                     alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/dribbble.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/dribbble.png') }}"
                                                     alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
@@ -317,21 +321,21 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/dropbox.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/dropbox.png') }}"
                                                     alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/mail_chimp.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/mail_chimp.png') }}"
                                                     alt="mail_chimp">
                                                 <span>Mail Chimp</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#!">
-                                                <img src="{{ asset('admin-assets/images/brands/slack.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/brands/slack.png') }}"
                                                     alt="slack">
                                                 <span>Slack</span>
                                             </a>
@@ -380,7 +384,7 @@
                                         </div>
                                         <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('admin-assets/images/products/img-1.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/products/img-1.png') }}"
                                                     class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="mt-0 mb-1 fs-14">
@@ -407,7 +411,7 @@
 
                                         <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('admin-assets/images/products/img-2.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/products/img-2.png') }}"
                                                     class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="mt-0 mb-1 fs-14">
@@ -432,7 +436,7 @@
 
                                         <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('admin-assets/images/products/img-3.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/products/img-3.png') }}"
                                                     class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="mt-0 mb-1 fs-14">
@@ -459,7 +463,7 @@
 
                                         <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('admin-assets/images/products/img-6.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/products/img-6.png') }}"
                                                     class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="mt-0 mb-1 fs-14">
@@ -486,7 +490,7 @@
 
                                         <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('admin-assets/images/products/img-5.png') }}"
+                                                <img src="{{ asset('/admin-assets/images/products/img-5.png') }}"
                                                     class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
                                                 <div class="flex-grow-1">
                                                     <h6 class="mt-0 mb-1 fs-14">
@@ -634,7 +638,7 @@
                                             <div
                                                 class="text-reset notification-item d-block dropdown-item position-relative">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-2.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-2.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs flex-shrink-0"
                                                         alt="user-pic">
                                                     <div class="flex-grow-1">
@@ -697,7 +701,7 @@
                                             <div
                                                 class="text-reset notification-item d-block dropdown-item position-relative">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-8.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-8.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs flex-shrink-0"
                                                         alt="user-pic">
                                                     <div class="flex-grow-1">
@@ -739,7 +743,7 @@
                                         <div data-simplebar style="max-height: 300px;" class="pe-2">
                                             <div class="text-reset notification-item d-block dropdown-item">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-3.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-3.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                     <div class="flex-grow-1">
                                                         <a href="#!" class="stretched-link">
@@ -767,7 +771,7 @@
 
                                             <div class="text-reset notification-item d-block dropdown-item">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-2.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-2.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                     <div class="flex-grow-1">
                                                         <a href="#!" class="stretched-link">
@@ -796,7 +800,7 @@
 
                                             <div class="text-reset notification-item d-block dropdown-item">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-6.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-6.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                     <div class="flex-grow-1">
                                                         <a href="#!" class="stretched-link">
@@ -826,7 +830,7 @@
 
                                             <div class="text-reset notification-item d-block dropdown-item">
                                                 <div class="d-flex">
-                                                    <img src="{{ asset('admin-assets/images/users/avatar-8.jpg') }}"
+                                                    <img src="{{ asset('/admin-assets/images/users/avatar-8.jpg') }}"
                                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                                     <div class="flex-grow-1">
                                                         <a href="#!" class="stretched-link">
@@ -880,7 +884,7 @@
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="d-flex align-items-center">
                                     <img class="rounded-circle header-profile-user"
-                                        src="{{ asset('admin-assets/images/users/avatar-1.jpg') }}"
+                                        src="{{ asset('/admin-assets/images/users/avatar-1.jpg') }}"
                                         alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
                                         <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Anna
@@ -968,19 +972,19 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="admin-assets/images/logo-sm.png" alt="" height="22" />
+                        <img src="/admin-assets/images/logo-sm.png" alt="" height="22" />
                     </span>
                     <span class="logo-lg">
-                        <img src="admin-assets/images/logo-dark.png" alt="" height="17" />
+                        <img src="/admin-assets/images/logo-dark.png" alt="" height="17" />
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="admin-assets/images/logo-sm.png" alt="" height="22" />
+                        <img src="/admin-assets/images/logo-sm.png" alt="" height="22" />
                     </span>
                     <span class="logo-lg">
-                        <img src="admin-assets/images/logo-light.png" alt="" height="17" />
+                        <img src="/admin-assets/images/logo-light.png" alt="" height="17" />
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -993,7 +997,7 @@
                 <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="d-flex align-items-center gap-2">
-                        <img class="rounded header-profile-user" src="admin-assets/images/users/avatar-1.jpg"
+                        <img class="rounded header-profile-user" src="/admin-assets/images/users/avatar-1.jpg"
                             alt="Header Avatar" />
                         <span class="text-start">
                             <span class="d-block fw-medium sidebar-user-name-text">Anna Adame</span>
@@ -1080,7 +1084,7 @@
         <!-- Main Content -->
         <main>
              <div class="main-content">
-        <div class="page-content">
+                <div class="page-content">
  
                     @yield('content')
                 </div>
@@ -1113,28 +1117,69 @@
 
 
     <!-- JAVASCRIPT -->
-    <script src="{{ asset('admin-assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/libs/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/libs/node-waves/waves.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/libs/feather-icons/feather.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
-    <script src="{{ asset('admin-assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
+    <script src="{{ asset('/admin-assets/js/plugins.js') }}"></script>
 
     <!-- apexcharts -->
-    <script src="{{ asset('admin-assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
     <!-- Vector map-->
-    <script src="{{ asset('admin-assets/libs/jsvectormap/jsvectormap.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/jsvectormap/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
 
     <!--Swiper slider js-->
-    <script src="{{ asset('admin-assets/libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/libs/swiper/swiper-bundle.min.js') }}"></script>
 
     <!-- Dashboard init -->
-    <script src="{{ asset('admin-assets/js/pages/dashboard-ecommerce.init.') }}"></script>
+    <script src="{{ asset('/admin-assets/js/pages/dashboard-ecommerce.init.') }}"></script>
 
     <!-- App js -->
-    <script src="{{ asset('admin-assets/js/app.j') }}'"></script>
+    <script src="{{ asset('/admin-assets/js/app.j') }}'"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this YouTube Short?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let deleteFormId;
+
+  // When delete button is clicked, store the form ID
+  const deleteModal = document.getElementById('deleteModal');
+  deleteModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    deleteFormId = button.getAttribute('data-form-id');
+  });
+
+  // When confirm delete in modal is clicked, submit the correct form
+  document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+    if(deleteFormId) {
+      document.getElementById(deleteFormId).submit();
+    }
+  });
+</script>
 
     @yield('script')
     <!-- Mirrored from themesbrand.com/velzon/html/master/auth-signin-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Aug 2025 11:44:29 GMT -->
