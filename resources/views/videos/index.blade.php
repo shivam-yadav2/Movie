@@ -25,7 +25,7 @@
           <td><a href="{{$video->url }}" target="_blank">{{ $video->url }}</a></td>
           <td>
             @if($video->image)
-              <img src="{{ asset($video->image) }}" alt="Video Image" class="video-image">
+              <img src="{{ asset($video->image) }}" height="100px" alt="Video Image" class="video-image">
             @endif
           </td>
           <td>

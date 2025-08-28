@@ -47,6 +47,10 @@ Route::get('/faq', function () {
     return view('pages.faq');
 })->name('faq');
 
+Route::get('/our-services', function () {
+    return view('pages.privacy');
+})->name('our-services');
+
 // Catalog and movie pages
 Route::get('/catalog', function () {
     return view('pages.catalog');
@@ -118,7 +122,6 @@ Route::get('/heroes/{hero}/edit', [HeroController::class, 'edit'])->name('heroes
 Route::put('/heroes/{hero}', [HeroController::class, 'update'])->name('heroes.update');
 // Delete hero
 Route::delete('/heroes/{hero}', [HeroController::class, 'destroy'])->name('heroes.destroy');
-
 
 // Show all shorts
 Route::get('/shorts', [ShortsController::class, 'index'])->name('shorts.index');

@@ -1,6 +1,6 @@
 @extends('layout.Layout')
 
-@section('title', 'HotFlix')
+@section('title', 'Prizm Production')
 
 @section('content')
 <div class="container">
@@ -10,7 +10,7 @@
 						<!-- authorization form -->
 						<form action="#" class="sign__form">
 							<a href="{{ asset('index.html') }}" class="sign__logo">
-								<img src="{{ asset('assets/img/logo.svg') }}" alt="">
+								<img src="{{ asset('assets/image.png') }}" alt="">
 							</a>
 
 							<div class="sign__group">

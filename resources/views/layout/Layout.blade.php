@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/splide.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slimselect.css') }}">
@@ -22,13 +21,13 @@
     <link rel="apple-touch-icon" href="{{ asset('assets/icon/favicon-32x32.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <meta name="description" content="Online Movies, TV Shows & Cinema HTML Template">
-    <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
-    <title>@yield('title', 'HotFlix – Online Movies, TV Shows & Cinema')</title>
-    @yield('css')
-    @stack('styles')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- CSS -->
+    <l <meta name="description" content="Online Movies, TV Shows & Cinema HTML Template">
+        <meta name="keywords" content="">
+        <meta name="author" content="Dmitry Volkov">
+        <title>@yield('title', 'Prizm Production')</title>
+        @yield('css')
+        @stack('styles')
 </head>
 
 <body>
@@ -40,11 +39,9 @@
                     <div class="header__content">
                         <!-- header logo -->
                         <a href="{{ route('home') }}" class="header__logo">
-                            <img src="{{ asset('assets/img/logo.svg') }}" alt="">
+                            <img src="{{ asset('assets/image.png') }}" alt="">
                         </a>
-                        <!-- end header logo -->
 
-                        <!-- header nav -->
                         <ul class="header__nav">
                             <!-- dropdown -->
                             <li class="header__nav-item">
@@ -59,8 +56,8 @@
 
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href={{ route('catalog2') }} role="button"
-                                    aria-expanded="false">Movies </a>
+                                <a class="header__nav-link" href={{ route('our-services') }} role="button"
+                                    aria-expanded="false">Our-Services </a>
                             </li>
                             <li class="header__nav-item">
                                 <a class="header__nav-link" href={{ route('actor') }} role="button"
@@ -84,27 +81,20 @@
                                     <i class="ti ti-x"></i>
                                 </button>
                             </form>
-                            <button class="header__search-btn" type="button">
+                            {{-- <button class="header__search-btn" type="button">
                                 <i class="ti ti-search"></i>
-                            </button>
+                            </button> --}}
                             <!-- dropdown -->
 
                             <!-- end dropdown -->
                             <!-- dropdown -->
-                            <div class="header__profile">
-                                <a class="header__sign-in header__sign-in--user" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="header__profile d-lg-block d-none">
+                                <a class="header__sign-in header__sign-in--user" href="/about" role="button"
+                            >
                                     <i class="ti ti-user"></i>
-                                    <span>Nickname</span>
+                                    <span>About Us</span>
                                 </a>
-                                <ul
-                                    class="dropdown-menu dropdown-menu-end header__dropdown-menu header__dropdown-menu--user">
-                                    <li><a href="{{ route('profile') }}"><i class="ti ti-ghost"></i>Profile</a></li>
-                                    <li><a href="#"><i class="ti ti-stereo-glasses"></i>Subscription</a></li>
-                                    <li><a href="#"><i class="ti ti-bookmark"></i>Favorites</a></li>
-                                    <li><a href="#"><i class="ti ti-settings"></i>Settings</a></li>
-                                    <li><a href="#"><i class="ti ti-logout"></i>Logout</a></li>
-                                </ul>
+                                
                             </div>
                             <!-- end dropdown -->
                         </div>
@@ -137,9 +127,9 @@
                 <div class="col-12">
                     <div class="footer__content">
                         <a href="{{ route('home') }}" class="footer__logo">
-                            <img src="{{ asset('assets/img/logo.svg') }}" alt="">
+                            <img src="{{ asset('assets/image.png') }}" alt="">
                         </a>
-                        <span class="footer__copyright">© HOTFLIX, 2019—2024 <br> Create by <a
+                        <span class="footer__copyright">© Production, 2019—2024 <br> Create by <a
                                 href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Dmitry
                                 Volkov</a></span>
                         <nav class="footer__nav">
@@ -230,6 +220,7 @@
             },
         })
     </script>
+    @yield('js')
     @stack('scripts')
 </body>
 
