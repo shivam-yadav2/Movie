@@ -32,8 +32,10 @@
         <img src="{{ asset($short->image) }}" alt="Current Image" class="preview-image mt-3"  width="100">
       @endif
     </div>
-    
-    <button type="submit" class="btn btn-primary w-40 text-center fs-5"><i class="fas fa-save me-2"></i> Update Short</button>
+    <div class="d-grid mx-4 my-4">
+        <button type="submit" class="btn btn-primary shadow-sm waves-effect waves-light text-center fs-5" style="width:150px; heigth:150px">Update </button>
+      </div>
+   
   </form>
 </div>
 

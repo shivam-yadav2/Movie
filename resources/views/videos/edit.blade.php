@@ -39,7 +39,9 @@
       @endif
     </div>
 
-    <button type="submit" class="btn btn-success w-40 text-center fs-5"><i class="fas fa-save me-2"></i> Update Video</button>
+   <div class="d-grid mx-4 my-4">
+      <button type="submit" class="btn btn-primary shadow-sm waves-effect waves-light" style="width:150px; heigth:150px">Update</button>
+    </div>
   </form>
 </div>
 

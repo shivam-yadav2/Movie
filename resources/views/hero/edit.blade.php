@@ -23,8 +23,8 @@
           <img src="{{ asset($hero->image) }}" alt="Current Hero Image" width="100" class="current-image">
         @endif
       </div>
-      <div class="d-grid">
-        <button type="submit" class="btn btn-primary  w-40 text-center fs-5">Update Hero Slide</button>
+      <div class="d-grid mx-4 my-4">
+        <button type="submit" class="btn btn-primary shadow-sm waves-effect waves-light text-center fs-5" style="width:150px; heigth:150px">Update </button>
       </div>
     </form>
   </div>
