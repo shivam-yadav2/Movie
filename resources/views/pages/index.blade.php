@@ -268,6 +268,11 @@
         }
     </style>
     <style>
+        .swiper {
+            width: 100%;
+            height: 300px;
+        }
+
         /* Main styling matching Production theme */
         .who {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -881,29 +886,36 @@
     <section class="creative-carousal--hero">
         <div class="carousel-slider swiper-container-horizontal">
             <div class="swiper-wrapper">
-                
-                <div class="swiper-slide" data-background="https://i.ibb.co/nNggbhf5/joshua-earle-njz0-Tt-Rszo-unsplash.jpg" style="background-image: url(https://i.ibb.co/nNggbhf5/joshua-earle-njz0-Tt-Rszo-unsplash.jpg);">
-					<div class="inner"><h2>DISCOVER</h2> 
-						<a href="#">DISCOVER CASE</a> 
-					</div>
-				</div>
-				<div class="swiper-slide" data-background="https://i.ibb.co/jPhPjG6W/roxy-aln-A7-Fq-Nh-YQm-TA-unsplash.jpg" style="background-image: url(https://i.ibb.co/jPhPjG6W/roxy-aln-A7-Fq-Nh-YQm-TA-unsplash.jpg);">
-					<div class="inner"><h2>EXCLUSION</h2> 
-					<a href="#">DISCOVER CASE</a> 
-				</div>
-				</div>
-				<div class="swiper-slide" data-background="https://i.ibb.co/dJgDPQDB/nils-limp-3-S7i7-T-Wtdg-unsplash.jpg" style="background-image: url(https://i.ibb.co/dJgDPQDB/nils-limp-3-S7i7-T-Wtdg-unsplash.jpg);">
-					<div class="inner">
-						<h2>EDITIONAL</h2> 
-						<a href="#">DISCOVER CASE</a> 
-					</div>
-				</div>
-				<div class="swiper-slide" data-background="https://i.ibb.co/zVy2cXdt/tasso-mitsarakis-Uz-KR8v86-QTM-unsplash.jpg" style="background-image: url(https://i.ibb.co/zVy2cXdt/tasso-mitsarakis-Uz-KR8v86-QTM-unsplash.jpg);">
-					<div class="inner">
-						<h2>AVAILABLE</h2> 
-						<a href="#">DISCOVER CASE</a> 
-					</div>
-				</div>
+
+                <div class="swiper-slide" data-background="https://i.ibb.co/nNggbhf5/joshua-earle-njz0-Tt-Rszo-unsplash.jpg"
+                    style="background-image: url(https://i.ibb.co/nNggbhf5/joshua-earle-njz0-Tt-Rszo-unsplash.jpg);">
+                    <div class="inner">
+                        <h2>DISCOVER</h2>
+                        <a href="#">DISCOVER CASE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-background="https://i.ibb.co/jPhPjG6W/roxy-aln-A7-Fq-Nh-YQm-TA-unsplash.jpg"
+                    style="background-image: url(https://i.ibb.co/jPhPjG6W/roxy-aln-A7-Fq-Nh-YQm-TA-unsplash.jpg);">
+                    <div class="inner">
+                        <h2>EXCLUSION</h2>
+                        <a href="#">DISCOVER CASE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-background="https://i.ibb.co/dJgDPQDB/nils-limp-3-S7i7-T-Wtdg-unsplash.jpg"
+                    style="background-image: url(https://i.ibb.co/dJgDPQDB/nils-limp-3-S7i7-T-Wtdg-unsplash.jpg);">
+                    <div class="inner">
+                        <h2>EDITIONAL</h2>
+                        <a href="#">DISCOVER CASE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide"
+                    data-background="https://i.ibb.co/zVy2cXdt/tasso-mitsarakis-Uz-KR8v86-QTM-unsplash.jpg"
+                    style="background-image: url(https://i.ibb.co/zVy2cXdt/tasso-mitsarakis-Uz-KR8v86-QTM-unsplash.jpg);">
+                    <div class="inner">
+                        <h2>AVAILABLE</h2>
+                        <a href="#">DISCOVER CASE</a>
+                    </div>
+                </div>
                 @foreach (\App\Models\Hero::all() as $hero)
                     <div class="swiper-slide" data-background="{{ asset($hero->image) }}"
                         style="background-image: url({{ asset($hero->image) }});">
@@ -933,57 +945,171 @@
         <div class="container">
             <div class="row">
                 <!-- home title -->
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h1 class="home__title"><b>Latest Shorts</b> OF THIS SEASON</h1>
                 </div>
                 <!-- end home title -->
 
                 <!-- home carousel -->
                 <div class="col-12">
-                    <div class="home__carousel splide splide--home">
-                        <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev" type="button">
-                                <i class="ti ti-chevron-left"></i>
-                            </button>
-                            <button class="splide__arrow splide__arrow--next" type="button">
-                                <i class="ti ti-chevron-right"></i>
-                            </button>
-                        </div>
 
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                @foreach ($shorts as $short)
-                                    <li class="splide__slide">
-                                        <div class="item item--hero">
-                                            <div class="item__cover">
-                                                <img src="{{ asset($short->image ?? 'assets/img/covers/default.jpg') }}"
-                                                    alt="">
-                                                <a href="{{ $short->url }}" class="item__play" target="_blank">
-                                                    <i class="ti ti-player-play-filled"></i>
-                                                </a>
-                                                {{-- Optional: rating if you have it --}}
-                                                {{-- <span class="item__rate item__rate--green">8.0</span> --}}
-                                                <button class="item__favorite" type="button"><i
-                                                        class="ti ti-bookmark"></i></button>
-                                            </div>
-                                            <div class="item__content">
-                                                <h3 class="item__title"><a href="{{ $short->url }}"
-                                                        target="_blank">{{ $short->heading }}</a></h3>
-                                                <span class="item__category">
-                                                    @if ($short->category)
-                                                        @foreach (explode(',', $short->category) as $cat)
-                                                            <a href="#">{{ $cat }}</a>
-                                                        @endforeach
-                                                    @endif
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
+                    <ul class="row ">
+                        {{-- <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-5">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover12.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--green">8.4</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">The Edge of Tomorrow</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Action</a>
+                                        <a href="#">Triler</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li> --}}
+
+                        @foreach ($shorts as $short)
+                            <li class="col-6 col-sm-3 p-3">
+                                <div class="item item--hero mb-4">
+                                    <div class="item__cover">
+                                        
+                                            <img src="{{ asset($short->image) }}" alt="{{ $short->heading }}">
+                                            
+                                        
+
+                                        <a href="{{ $short->url ?? '#' }}" class="item__play">
+                                            <i class="ti ti-player-play-filled"></i>
+                                        </a>
+
+                                        
+                                            
+                                        
+
+                                        <button class="item__favorite" type="button">
+                                            <i class="ti ti-bookmark"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="item__content">
+                                        <h3 class="item__title">
+                                            <a href="{{ $short->url ?? '#' }}">{{ $short->heading }}</a>
+                                        </h3>
+                                        <span class="item__category">
+                                            @if ($short->category)
+                                                <a href="#">{{ $short->category }}</a>
+                                            @endif
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+
+                        {{-- <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-4">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover2.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--green">7.1</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">Benched</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Comedy</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-4">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover8.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--green">7.9</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">Green Hell</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Romance</a>
+                                        <a href="#">Drama</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-4">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover9.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--yellow">6.8</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">Survival Spliton</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Comedy</a>
+                                        <a href="#">Drama</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-4">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover13.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--green">9.1</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">The Chebod</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Drama</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="col-6 col-sm-3 p-3">
+                            <div class="item item--hero mb-4">
+                                <div class="item__cover">
+                                    <img src="assets/img/covers/cover5.jpg" alt="">
+                                    <a href="details.html" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--yellow">6.7</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="details.html">Shadow</a></h3>
+                                    <span class="item__category">
+                                        <a href="#">Drama</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li> --}}
+                    </ul>
+
                 </div>
+                <!-- end home carousel -->
                 <!-- end home carousel -->
             </div>
         </div>
@@ -999,29 +1125,137 @@
 
                 <!-- home carousel -->
                 <div class="col-12">
-                    <div class="yt__carousel splide splide--home">
-                        <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev" type="button">
-                                <i class="ti ti-chevron-left"></i>
-                            </button>
-                            <button class="splide__arrow splide__arrow--next" type="button">
-                                <i class="ti ti-chevron-right"></i>
-                            </button>
-                        </div>
+                    <div class="yt__carousel  --home">
 
-                        <div class="splide__track">
-                            <ul class="splide__list">
+
+                        <div class="">
+                            <ul class="row">
+                                <li class="col-6 col-sm-4 ">
+                                    <div class="item item--hero mb-4">
+                                        <div class="item__cover">
+                                            <iframe style="width: 100%; height:100%"
+                                                src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            {{-- <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a> --}}
+                                            <span class="item__rate item__rate--green">7.1</span>
+                                            <button class="item__favorite" type="button"><i
+                                                    class="ti ti-bookmark"></i></button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a>Benched</a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-sm-4 ">
+                                    <div class="item item--hero mb-4">
+                                        <div class="item__cover">
+                                            <iframe style="width: 100%; height:100%"
+                                                src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            {{-- <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a> --}}
+                                            <span class="item__rate item__rate--green">7.1</span>
+                                            <button class="item__favorite" type="button"><i
+                                                    class="ti ti-bookmark"></i></button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a>Benched</a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-sm-4 ">
+                                    <div class="item item--hero mb-4">
+                                        <div class="item__cover">
+                                            <iframe style="width: 100%; height:100%"
+                                                src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            {{-- <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a> --}}
+                                            <span class="item__rate item__rate--green">7.1</span>
+                                            <button class="item__favorite" type="button"><i
+                                                    class="ti ti-bookmark"></i></button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a>Benched</a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-sm-4 ">
+                                    <div class="item item--hero mb-4">
+                                        <div class="item__cover">
+                                            <iframe style="width: 100%; height:100%"
+                                                src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            {{-- <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a> --}}
+                                            <span class="item__rate item__rate--green">7.1</span>
+                                            <button class="item__favorite" type="button"><i
+                                                    class="ti ti-bookmark"></i></button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a>Benched</a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-sm-4 ">
+                                    <div class="item item--hero mb-4">
+                                        <div class="item__cover">
+                                            <iframe style="width: 100%; height:100%"
+                                                src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            {{-- <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a> --}}
+                                            <span class="item__rate item__rate--green">7.1</span>
+                                            <button class="item__favorite" type="button"><i
+                                                    class="ti ti-bookmark"></i></button>
+                                        </div>
+
+                                        <div class="item__content">
+                                            <h3 class="item__title">
+                                                <a>Benched</a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </li>
                                 @foreach ($videos as $video)
-                                    <li class="splide__slide">
-                                        <div class="item item--hero">
+                                    <li class="col-6 col-sm-4 ">
+                                        <div class="item item--hero mb-4">
                                             <div class="item__cover">
                                                 @if ($video->embed_code)
-                                                    {{-- Show embed iframe if available --}}
-                                                    <iframe style="width: 100%; height:100%" src="{{ $video->embed_code }}"
-                                                        title="{{ $video->heading }}" frameborder="0"
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                        allowfullscreen>
-                                                    </iframe>
+                                                    {{ $video->embed_code }}
                                                 @elseif($video->image)
                                                     {{-- Show uploaded image --}}
                                                     <img src="{{ asset($video->image) }}" alt="{{ $video->heading }}">
@@ -1384,7 +1618,7 @@
                     tabindex="0">
                     <div class="row">
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover.jpg') }}" alt="">
@@ -1407,7 +1641,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover2.jpg') }}" alt="">
@@ -1428,7 +1662,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover3.jpg') }}" alt="">
@@ -1451,7 +1685,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover4.jpg') }}" alt="">
@@ -1473,7 +1707,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover5.jpg') }}" alt="">
@@ -1496,7 +1730,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover6.jpg') }}" alt="">
@@ -1517,7 +1751,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover7.jpg') }}" alt="">
@@ -1538,7 +1772,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover8.jpg') }}" alt="">
@@ -1567,7 +1801,7 @@
                 <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab" tabindex="0">
                     <div class="row">
                         <!-- item -->
-                        <div class="col-6 col-sm-4  ">
+                        <div class="col-6 col-sm-4 p-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <iframe style="width: 100%; height:100%"
@@ -1575,46 +1809,21 @@
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
+                                    {{-- <a href="{{ route('details') }}" class="item__play">
                                         <i class="ti ti-player-play-filled"></i>
-                                    </a>
+                                    </a> --}}
                                     <span class="item__rate item__rate--green">7.1</span>
                                     <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
                                 </div>
                                 <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Benched</a></h3>
+                                    <h3 class="item__title"><a>Benched</a></h3>
                                     <span class="item__category">
                                         <a href="{{ asset('#') }}">Comedy</a>
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--green">7.1</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Benched</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Comedy</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
+                        <div class="col-6 col-sm-4 p-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <iframe style="width: 100%; height:100%"
@@ -1639,7 +1848,32 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4  ">
+                        <div class="col-6 col-sm-4 p-3 ">
+                            <div class="item">
+                                <div class="item__cover">
+                                    <iframe style="width: 100%; height:100%"
+                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <a href="{{ route('details') }}" class="item__play">
+                                        <i class="ti ti-player-play-filled"></i>
+                                    </a>
+                                    <span class="item__rate item__rate--green">7.1</span>
+                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
+                                </div>
+                                <div class="item__content">
+                                    <h3 class="item__title"><a href="{{ route('details') }}">Benched</a></h3>
+                                    <span class="item__category">
+                                        <a href="{{ asset('#') }}">Comedy</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end item -->
+
+                        <!-- item -->
+                        <div class="col-6 col-sm-4 p-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <iframe style="width: 100%; height:100%"
@@ -1665,136 +1899,7 @@
                         </div>
                         <!-- end item -->
 
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--yellow">6.7</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Blindspotting</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Comedy</a>
-                                        <a href="{{ asset('#') }}">Drama</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--red">5.6</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Whitney</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Romance</a>
-                                        <a href="{{ asset('#') }}">Drama</a>
-                                        <a href="{{ asset('#') }}">Music</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--green">9.2</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Benched</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Comedy</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--green">8.4</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">I Dream in Another
-                                            Language</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Action</a>
-                                        <a href="{{ asset('#') }}">Triler</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        <div class="col-6 col-sm-4  ">
-                            <div class="item">
-                                <div class="item__cover">
-                                    <iframe style="width: 100%; height:100%"
-                                        src="https://www.youtube.com/embed/yCpVXjOY6HY?si=NiBRXIxmEANzzTmU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <a href="{{ route('details') }}" class="item__play">
-                                        <i class="ti ti-player-play-filled"></i>
-                                    </a>
-                                    <span class="item__rate item__rate--green">7.1</span>
-                                    <button class="item__favorite" type="button"><i class="ti ti-bookmark"></i></button>
-                                </div>
-                                <div class="item__content">
-                                    <h3 class="item__title"><a href="{{ route('details') }}">Benched</a></h3>
-                                    <span class="item__category">
-                                        <a href="{{ asset('#') }}">Comedy</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-
+                        
 
                     </div>
                 </div>
@@ -1802,7 +1907,7 @@
                 <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab" tabindex="0">
                     <div class="row">
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover13.jpg') }}" alt="">
@@ -1825,7 +1930,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover14.jpg') }}" alt="">
@@ -1846,7 +1951,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover15.jpg') }}" alt="">
@@ -1869,7 +1974,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover16.jpg') }}" alt="">
@@ -1891,7 +1996,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover17.jpg') }}" alt="">
@@ -1914,7 +2019,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover18.jpg') }}" alt="">
@@ -1935,7 +2040,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover.jpg') }}" alt="">
@@ -1958,7 +2063,7 @@
                         <!-- end item -->
 
                         <!-- item -->
-                        <div class="col-6 col-sm-4 col-lg-3 ">
+                        <div class="col-6 col-sm-3 p-3col-lg-3 ">
                             <div class="item">
                                 <div class="item__cover">
                                     <img src="{{ asset('assets/img/covers/cover2.jpg') }}" alt="">
@@ -1986,13 +2091,13 @@
             </div>
             <!-- end content tabs -->
 
-            <div class="row">
+            {{-- <div class="row">
                 <!-- more -->
                 <div class="col-12">
                     <a class="section__more" href="{{ asset('catalog.html') }}">View all</a>
                 </div>
                 <!-- end more -->
-            </div>
+            </div> --}}
         </div>
     </section>
     <section class="section section--border">
@@ -2002,29 +2107,21 @@
                 <div class="col-12">
                     <div class="section__title-wrap">
                         <h2 class="section__title">Expected premiere</h2>
-                        <a href="{{ asset('catalog.html') }}" class="section__view section__view--carousel">View
-                            All</a>
+                        
                     </div>
                 </div>
                 <!-- end section title -->
 
                 <!-- carousel -->
                 <div class="col-12">
-                    <div class="section__carousel splide splide--content">
-                        <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev" type="button">
-                                <i class="ti ti-chevron-left"></i>
-                            </button>
-                            <button class="splide__arrow splide__arrow--next" type="button">
-                                <i class="ti ti-chevron-right"></i>
-                            </button>
-                        </div>
+                    <div class="section__carousel  --content">
+                        
 
-                        <div class="splide__track">
-                            <ul class="splide__list">
+                        <div class="">
+                            <ul class="row">
 
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover2.jpg') }}" alt="">
@@ -2044,7 +2141,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover3.jpg') }}" alt="">
@@ -2066,7 +2163,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover4.jpg') }}" alt="">
@@ -2088,7 +2185,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover5.jpg') }}" alt="">
@@ -2110,7 +2207,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover6.jpg') }}" alt="">
@@ -2130,7 +2227,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover7.jpg') }}" alt="">
@@ -2150,7 +2247,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover8.jpg') }}" alt="">
@@ -2172,7 +2269,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover9.jpg') }}" alt="">
@@ -2194,7 +2291,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover10.jpg') }}" alt="">
@@ -2216,7 +2313,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover11.jpg') }}" alt="">
@@ -2236,7 +2333,7 @@
                                     </div>
                                 </li>
 
-                                <li class="splide__slide">
+                                <li class="col-6 col-sm-3 p-3">
                                     <div class="item item--carousel">
                                         <div class="item__cover">
                                             <img src="{{ asset('assets/img/covers/cover12.jpg') }}" alt="">
@@ -2425,5 +2522,54 @@
                 });
             });
         });
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        <!-- Include Swiper CSS and JS 
+        -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    const swiper = new Swiper('.mySwiperSlider', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+
+    speed: 800,
+    breakpoints: {
+    320: {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    },
+    576: {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    },
+    768: {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    },
+    992: {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    },
+    1200: {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    },
+    1400: {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    }
+    }
+    });
+
+    ;
     </script>
 @endsection

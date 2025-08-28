@@ -64,7 +64,7 @@ class VideoController extends Controller
         }
 
         $video->image = $imageName;
-        $video->save();
+        // $video->save();
 
         return redirect()->route('videos.index')->with('success', 'Video created successfully.');
     }

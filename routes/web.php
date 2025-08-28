@@ -123,7 +123,6 @@ Route::put('/heroes/{hero}', [HeroController::class, 'update'])->name('heroes.up
 // Delete hero
 Route::delete('/heroes/{hero}', [HeroController::class, 'destroy'])->name('heroes.destroy');
 
-
 // Show all shorts
 Route::get('/shorts', [ShortsController::class, 'index'])->name('shorts.index');
 // Show create form

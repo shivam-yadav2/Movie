@@ -81,27 +81,20 @@
                                     <i class="ti ti-x"></i>
                                 </button>
                             </form>
-                            <button class="header__search-btn" type="button">
+                            {{-- <button class="header__search-btn" type="button">
                                 <i class="ti ti-search"></i>
-                            </button>
+                            </button> --}}
                             <!-- dropdown -->
 
                             <!-- end dropdown -->
                             <!-- dropdown -->
-                            <div class="header__profile">
-                                <a class="header__sign-in header__sign-in--user" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="header__profile d-lg-block d-none">
+                                <a class="header__sign-in header__sign-in--user" href="/about" role="button"
+                            >
                                     <i class="ti ti-user"></i>
-                                    <span>Nickname</span>
+                                    <span>About Us</span>
                                 </a>
-                                <ul
-                                    class="dropdown-menu dropdown-menu-end header__dropdown-menu header__dropdown-menu--user">
-                                    <li><a href="{{ route('profile') }}"><i class="ti ti-ghost"></i>Profile</a></li>
-                                    <li><a href="#"><i class="ti ti-stereo-glasses"></i>Subscription</a></li>
-                                    <li><a href="#"><i class="ti ti-bookmark"></i>Favorites</a></li>
-                                    <li><a href="#"><i class="ti ti-settings"></i>Settings</a></li>
-                                    <li><a href="#"><i class="ti ti-logout"></i>Logout</a></li>
-                                </ul>
+                                
                             </div>
                             <!-- end dropdown -->
                         </div>
