@@ -90,7 +90,7 @@ class HeroController extends Controller
           // ⚡ Fix: assign image path or null before saving
         $hero->image = $imageName;
     
-        // $hero->save();
+        $hero->save();
 
         return redirect()->route('heroes.index')->with('success', 'Hero created successfully.');
     }
